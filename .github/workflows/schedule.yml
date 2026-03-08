@@ -1,3 +1,4 @@
+name: schedule actions
 on:
   schedule:
     - cron: '*/5 * * * *'
