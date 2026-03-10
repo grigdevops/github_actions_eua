@@ -1,0 +1,16 @@
+name: Context Example
+
+on: push
+
+jobs:
+  show-context:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Print GitHub Context Information
+        run: |
+          echo "Repository: ${{ github.repository }}"
+          echo "Workflow name: ${{ github.workflow }}"
+          echo "Triggered by user: ${{ github.actor }}"
+          echo "Event type: ${{ github.event_name }}"
+          echo "Branch or tag: ${{ github.ref }}"
