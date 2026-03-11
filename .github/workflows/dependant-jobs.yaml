@@ -1,0 +1,17 @@
+name: Job Dependency Example
+
+on: push
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Build step
+        run: echo "Building the project..."
+
+  test:
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - name: Test step
+        run: echo "Running tests..."
